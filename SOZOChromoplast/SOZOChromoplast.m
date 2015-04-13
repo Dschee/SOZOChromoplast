@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         NSArray *pixelColors = [SOZOBitmapDataGenerator bitmapDataForImage:[image downsizeIfNeeded]];
-        SOZOColorSorter *sorter = [SOZOColorSorter colorSorterWithGranularity:8];
+        SOZOColorSorter *sorter = [SOZOColorSorter colorSorterWithGranularity:2];
         _colors = [sorter sortColors:pixelColors];
         [self setUpColors];
     }
